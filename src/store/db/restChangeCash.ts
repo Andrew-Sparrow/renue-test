@@ -1,9 +1,10 @@
-type AllowedChangeMoney = 1 | 5 | 10 | 50 | 100 | 500;
+import { changeBanknotes } from "../../const";
+type AllowedChangeMoney = typeof changeBanknotes[number]
 
 type RestOfCash = {
   banknote: AllowedChangeMoney,
   restAmount: number
-}
+};
 
 export let restOfCash: RestOfCash[] = [
   {
@@ -16,18 +17,18 @@ export let restOfCash: RestOfCash[] = [
   },
   {
     banknote: 10,
-    restAmount: 50
+    restAmount: 11
   },
   {
     banknote: 50,
-    restAmount: 50
+    restAmount: 40
   },
   {
     banknote: 100,
-    restAmount: 50
+    restAmount: 25
   },
   {
     banknote: 500,
     restAmount: 50
   },
-]
+];
