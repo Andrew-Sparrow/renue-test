@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #4b5254;
 }
 
 .wrapper {
@@ -26,6 +27,23 @@
 .deposit,
 .money {
   width: 280px;
+}
+
+.deposit {
+  &__info {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  &__value {
+    display: block;
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 20px;
+  }
 }
 
 .button {
