@@ -66,6 +66,19 @@
     padding: 10px;
   }
 
+  &__rest {
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    text-align: start;
+    min-height: 30px;
+    background-color: #fff;
+  }
+
   span {
     margin-left: 10px;
     margin-right: 10px;
@@ -136,3 +149,5 @@
 .goods {
   list-style: none;
 }
+
+.purchased {}

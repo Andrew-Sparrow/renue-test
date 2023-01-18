@@ -1,4 +1,6 @@
 import React from 'react';
+import PurchasedList from '../purchased-list/purchased-list';
+import ChangeList from '../change-list/change-list';
 
 export function Purchased(props) {
   return (
@@ -10,11 +12,9 @@ export function Purchased(props) {
         </ul>
       </div>
       <div>
+        <button className='button'>Get change</button>
         <h4>Your change</h4>
-        <button>Get change</button>
-        <ul>
-          List of change
-        </ul>
+        <ChangeList />
       </div>
     </div>
   );
