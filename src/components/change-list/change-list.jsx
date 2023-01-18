@@ -20,7 +20,11 @@ function ChangeList(props) {
   return (
     <ul>
       {restOfCash.map((change) => (
-        <Change denomination={change.banknote} restAmount={change.restAmount} />)
+        <Change
+          denomination={change.banknote}
+          restAmount={change.restAmount}
+          key={change.banknote}
+        />)
       )}
     </ul>
   );

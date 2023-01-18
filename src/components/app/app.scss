@@ -20,6 +20,7 @@ $tablet-width: 768px;
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 50px;
 
   &__title {
     padding-top: 50px;
@@ -189,11 +190,7 @@ $tablet-width: 768px;
     .purchased {
       border-right: 1px solid #000;
       padding-right: 50px;
-      list-style: none;
-      overflow-y: auto;
-      height: 300px;
       margin-top: 50px;
-
     }
 
     .change {
@@ -201,7 +198,6 @@ $tablet-width: 768px;
       padding-left: 50px;
       margin-top: 50px;
     }
-
 
   .goods {
     height: 400px;

@@ -11,7 +11,7 @@ export function Money(props) {
           <Banknote denomination={denomination} key={denomination} />
         ))}
       </ul>
-      <button className='button'>Deposit money</button>
+      <button className='button'>Add to Balance</button>
       <button className='button'>Get change/return money</button>
     </div>
   );
