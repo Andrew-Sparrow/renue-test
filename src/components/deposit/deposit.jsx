@@ -1,4 +1,5 @@
 import React from 'react';
+import { Goods } from '../goods/goods';
 
 export function Deposit(props) {
   return (
@@ -9,9 +10,7 @@ export function Deposit(props) {
       <p className='deposit__value'>{}</p>
       <p className='deposit__info deposit__info--warning'>Warning</p>
       <p className='deposit__value'>{}</p>
-      <ul className='goods'>
-        List of goods
-      </ul>
+      <Goods/>
     </div>
   );
 }

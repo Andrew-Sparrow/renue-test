@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid';
-import { GoodsTypes } from "../../../const";
+import { GoodsTypes } from "../../../util/const";
 
 type Product = {
   id: string,

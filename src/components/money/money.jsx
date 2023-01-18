@@ -7,7 +7,9 @@ export function Money(props) {
     <div className='money'>
       <p>Select banknotes to deposit into the machine</p>
       <ul className='banknotes'>
-        {acceptedBanknotes.map((denomination) => <Banknote denomination={denomination} />)}
+        {acceptedBanknotes.map((denomination) => (
+          <Banknote denomination={denomination} key={denomination} />
+        ))}
       </ul>
       <button className='button'>Deposit money</button>
       <button className='button'>Get change/return money</button>

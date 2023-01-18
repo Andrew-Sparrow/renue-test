@@ -37,6 +37,7 @@
   }
 
   &__value {
+    text-align: center;
     display: block;
     background-color: #fff;
     width: 100%;
@@ -47,10 +48,10 @@
 }
 
 .button {
-    width: 100%;
-    display: block;
-    padding: 10px;
-    margin-bottom: 20px;
+  width: 100%;
+  display: block;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
 .banknote {
@@ -77,4 +78,61 @@
   box-sizing: border-box;
   padding: 10px;
   background-color: #c0e7e1;
+}
+
+.product {
+  margin-bottom: 10px;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__title,
+  &__price,
+  &__amount {
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    text-align: start;
+    min-height: 30px;
+    background-color: #fff;
+  }
+
+  &__title {
+    width: 150px;
+    background-color: #fff;
+    border-bottom: 2px solid #66ff66;
+    margin-right: 10px;
+  }
+
+  &__type {
+    font-size: 10px;
+    text-align: start;
+  }
+
+  &__price,
+  &__amount {
+    width: 70px;
+  }
+
+  &__price {
+    margin-right: 10px;
+    font-weight: 600;
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  &__amount {
+    width: 50px;
+  }
+}
+
+.goods {
+  list-style: none;
 }
