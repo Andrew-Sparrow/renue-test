@@ -4,6 +4,7 @@ import ChangeList from '../change-list/change-list';
 
 export function Purchased(props) {
   return (
+    <div className="wrapper">
     <div className='purchased'>
       <div>
         <h4>Purchased goods</h4>
@@ -15,6 +16,7 @@ export function Purchased(props) {
         <button className='button'>Get change</button>
         <h4>Your change</h4>
         <ChangeList />
+      </div>
       </div>
     </div>
   );

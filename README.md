@@ -1,5 +1,8 @@
 # Getting Started with Create React App
 
+live version of this project is on GitHub Pages
+https://andrew-sparrow.github.io/renue-test/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

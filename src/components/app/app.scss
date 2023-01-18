@@ -1,3 +1,6 @@
+$tablet-width: 768px;
+
+
 .App {
   text-align: center;
   background-color: #4b5254;
@@ -25,7 +28,8 @@
 }
 
 .deposit,
-.money {
+.money,
+.purchased {
   width: 280px;
 }
 
@@ -95,6 +99,8 @@
 
 .product {
   margin-bottom: 10px;
+  background-color: #d7d7d7;
+  padding-bottom: 10px;
 
   &__wrapper {
     display: flex;
@@ -146,8 +152,41 @@
   }
 }
 
-.goods {
-  list-style: none;
+.product:hover {
+  background-color: #a1a1a1;
+  cursor: pointer;
 }
 
-.purchased {}
+.goods {
+  list-style: none;
+  overflow-y: auto;
+  height: 300px;
+}
+
+@media (min-width: $tablet-width) {
+  .main {
+    width: $tablet-width;
+  }
+
+  .deposit {
+    border-right: 1px solid #000;
+    padding-right: 50px;
+
+    &__info {
+      margin-bottom: 10px;
+    }
+  }
+
+  .money {
+    padding-left: 50px;
+  }
+
+  .purchased {
+    width: $tablet-width;
+    margin-top: 50px;
+  }
+
+  .goods {
+    height: 400px;
+  }
+}

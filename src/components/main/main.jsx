@@ -10,8 +10,8 @@ export function Main() {
     <main className='main'>
       <h1 className='main__title'>Vending Machine</h1>
       <div className='wrapper'>
-        <Money />
         <Deposit />
+        <Money />
       </div>
       <Purchased />
     </main>
