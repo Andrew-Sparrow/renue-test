@@ -28,37 +28,35 @@
   width: 280px;
 }
 
-.money {
-  &__button {
+.button {
     width: 100%;
     display: block;
     padding: 10px;
     margin-bottom: 20px;
-  }
-}
-
-.button {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .banknote {
   display: flex;
   margin-bottom: 20px;
+  align-items: center;
 
   &__input {
+    width: 185px;
+    box-sizing: border-box;
     height: 38px;
+    padding: 10px;
   }
 
   span {
     margin-left: 10px;
     margin-right: 10px;
+
   }
 }
 
 .denomination {
   width: 70px;
+  box-sizing: border-box;
   padding: 10px;
   background-color: #c0e7e1;
 }
