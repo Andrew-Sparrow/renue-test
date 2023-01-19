@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Money } from '../money/money.jsx';
+import { Money } from '../money/money.tsx';
 import { Deposit } from '../deposit/deposit.jsx';
 import { Purchased } from '../purchased/purchased.jsx';
 

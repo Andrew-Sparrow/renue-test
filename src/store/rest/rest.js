@@ -1,18 +1,20 @@
 import { createReducer } from '@reduxjs/toolkit';
+import { restOfCash } from '../db/restChangeCash.ts';
 
 import {
   addToBalance,
 } from '../actions';
 
+
 const initialState = {
-  balance: 0,
+  rest: restOfCash,
 };
 
-const balance = createReducer(initialState, (builder) => {
+const rest = createReducer(initialState, (builder) => {
   builder
     .addCase(addToBalance, (state, action) => {
-      state.balance = state.balance + action.payload;
+      state.rest = state.rest;
     })
 });
 
-export { balance };
+export { rest };

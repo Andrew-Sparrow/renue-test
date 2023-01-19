@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
+import { Note } from '../money/money';
 
-export function Banknote({ denomination }) {
-  const [value, setValue] = useState(0);
+
+export function Banknote({ denomination, onGivenCashChange }) {
+  const note: Note = {
+    nominal: denomination,
+    amount: 0
+  }
+
+  const [banknoteAmount, setBanknoteAmount] = useState(note);
   const [errorText, setErrorText] = useState('');
 
   function handleChangeInput(evt) {
@@ -9,10 +16,12 @@ export function Banknote({ denomination }) {
 
     if (isNaN(value)) {
       setErrorText('Enter only number');
-      setValue(0);
+      setBanknoteAmount({...note, amount: 0});
     } else {
-      setValue(+evt.target.value);
+      const newGivenBanknoteAmount = { ...note, amount: +evt.target.value };
+      setBanknoteAmount(newGivenBanknoteAmount);
       setErrorText('');
+      onGivenCashChange(newGivenBanknoteAmount);
     }
   }
 
@@ -24,7 +33,7 @@ export function Banknote({ denomination }) {
           className='banknote__input'
           type="text"
           onChange={handleChangeInput}
-          value={value}
+          value={banknoteAmount.amount}
         ></input>
         <p className="banknote__error">{errorText}</p>
       </div>

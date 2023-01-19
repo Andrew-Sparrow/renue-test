@@ -1,5 +1,5 @@
 import { changeBanknotes } from "../../const.ts";
-type AllowedChangeMoney = typeof changeBanknotes[number]
+export type AllowedChangeMoney = typeof changeBanknotes[number]
 
 type RestOfCash = {
   nominal: AllowedChangeMoney,
