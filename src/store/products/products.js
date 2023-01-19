@@ -4,8 +4,10 @@ import {
   excludeFromProducts,
 } from '../actions';
 
+import { goods } from '../db/goods.ts';
+
 const initialState = {
-  products: [],
+  products: goods,
 };
 
 const products = createReducer(initialState, (builder) => {

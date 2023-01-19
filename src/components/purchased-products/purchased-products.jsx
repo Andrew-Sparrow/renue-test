@@ -11,11 +11,13 @@ function PurchasedProducts(props) {
     <ul>
       {purchasedProducts.map((product) =>
         <Product
+          id={product.id}
           title={product.title}
           price={product.price}
           amount={product.amount}
           type={product.type}
-          key={product.id} />
+          key={product.id}
+        />
       )
       }
     </ul>

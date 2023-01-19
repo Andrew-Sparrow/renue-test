@@ -1,14 +1,18 @@
 import React from 'react';
-import { goods } from '../../store/db/goods.ts';
+import { useSelector } from 'react-redux';
+import { getProducts } from '../../store/products/selectors.js';
+
 import { Product } from '../product/product.tsx';
 
 
 export function Goods() {
+  const products = useSelector(getProducts);
 
   return (
     <ul className='goods'>
-      {goods.map((product) =>
+      {products.map((product) =>
         <Product
+          id={product.id}
           title={product.title}
           price={product.price}
           amount={product.amount}

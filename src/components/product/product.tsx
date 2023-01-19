@@ -1,6 +1,7 @@
 import React from 'react';
 
 interface ProductProps {
+  id: string;
   title: string;
   type: string;
   price: number;
@@ -8,9 +9,9 @@ interface ProductProps {
   isProductBought?: boolean;
 }
 
-export function Product({ title, type, price, amount, isProductBought }: ProductProps) {
+export function Product({ id, title, type, price, amount, isProductBought }: ProductProps) {
   function onClickProductHandle() {
-    console.log('click')
+    console.log(id)
   }
 
   return (
