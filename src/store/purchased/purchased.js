@@ -10,7 +10,6 @@ const initialState = {
 
 function updatePurchasedProducts(purchasedProducts, product) {
   let newPurchasedProducts = [...purchasedProducts];
-  console.log(product)
 
   if (newPurchasedProducts.some((item) => item.id === product.id)) {
     if (product.amount === 0) {
