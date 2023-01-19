@@ -8,7 +8,7 @@ export function Banknote({ denomination, onGivenCashChange }) {
     amount: 0
   }
 
-  const [banknoteAmount, setBanknoteAmount] = useState(note);
+  const [banknoteAmount, setBanknoteAmount] = useState(0);
   const [errorText, setErrorText] = useState('');
 
   function handleChangeInput(evt) {
@@ -16,10 +16,11 @@ export function Banknote({ denomination, onGivenCashChange }) {
 
     if (isNaN(value)) {
       setErrorText('Enter only number');
-      setBanknoteAmount({...note, amount: 0});
+      setBanknoteAmount(0);
     } else {
-      const newGivenBanknoteAmount = { ...note, amount: +evt.target.value };
-      setBanknoteAmount(newGivenBanknoteAmount);
+      const value = +evt.target.value
+      const newGivenBanknoteAmount = { ...note, amount: value };
+      setBanknoteAmount(value);
       setErrorText('');
       onGivenCashChange(newGivenBanknoteAmount);
     }
@@ -33,7 +34,7 @@ export function Banknote({ denomination, onGivenCashChange }) {
           className='banknote__input'
           type="text"
           onChange={handleChangeInput}
-          value={banknoteAmount.amount}
+          value={banknoteAmount}
         ></input>
         <p className="banknote__error">{errorText}</p>
       </div>

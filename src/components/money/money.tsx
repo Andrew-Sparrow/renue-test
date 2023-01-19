@@ -11,39 +11,35 @@ export type Note = {
   amount: number
 };
 
-const givenMoney: Note[] = [
-  {
-    nominal: 50,
-    amount: 0
-  },
-  {
-    nominal: 100,
-    amount: 0
-  },
-  {
-    nominal: 500,
-    amount: 0
-  },
-  {
-    nominal: 1000,
-    amount: 0
-  },
-];
+const givenMoney = {
+  50: 0,
+  100: 0,
+  500: 0,
+  1000: 0
+};
 
+function calculateBanknotesSum(banknotes) {
+  let keys = Object.keys(banknotes);
+
+  const result = keys.reduce((sum, current) => sum + (+current * banknotes[current]), 0);
+  return result;
+}
 
 
 export function Money(props) {
   const dispatch = useDispatch();
 
-  const [givenCash, setGivenCash] = useState(givenMoney);
-
+  const [givenBanknotes, setGivenBanknotes] = useState(givenMoney);
 
   function handleClickButton() {
-    dispatch(addToBalance(10));
+    const currentSum = calculateBanknotesSum(givenBanknotes);
+    console.log(currentSum)
+
+    dispatch(addToBalance(currentSum));
   }
 
   function onGivenCashChange(givenCash) {
-    console.log(givenCash);
+    setGivenBanknotes({ ...givenBanknotes, [givenCash.nominal]: givenCash.amount })
   }
 
   return (
