@@ -1,11 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Product } from '../product/product.tsx';
-import { getPurchased } from '../../store/purchased/selectors';
+import { getPurchasedProducts } from '../../store/purchased/selectors';
 
 
 function PurchasedProducts(props) {
-  const purchasedProducts = useSelector(getPurchased);
+  const purchasedProducts = useSelector(getPurchasedProducts);
 
   return (
     <ul>

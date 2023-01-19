@@ -1,29 +1,14 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
-import { excludeFromProducts } from '../../store/actions';
+import { ProductProps } from '../product/product';
 
-
-export interface ProductProps {
-  id: string;
-  title: string;
-  type: string;
-  price: number;
-  amount: number;
-  isProductBought?: boolean;
-}
 
 export function Product({ id, title, type, price, amount }: ProductProps) {
-  const dispatch = useDispatch();
-
-
-  function onClickProductHandle() {
-    console.log(id);
-    dispatch(excludeFromProducts(id))
-  }
+  // const 
 
   return (
-    <li className="product" onClick={onClickProductHandle}>
+    <li className="product product--bought" >
       <p className="product__type">{type}</p>
       <div className="product__wrapper">
         <p className="product__title">{title}</p>

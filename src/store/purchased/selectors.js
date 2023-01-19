@@ -1,3 +1,3 @@
 import { NameSpace } from '../root-reducer';
 
-export const getPurchased = (state) => state[NameSpace.PURCHASED].purchased;
+export const getPurchasedProducts = (state) => state[NameSpace.PURCHASED].purchased;
