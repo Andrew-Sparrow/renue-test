@@ -10,5 +10,3 @@ export enum GoodsTypes {
   cookies = 'Cookies',
   chips = 'Chips'
 };
-
-

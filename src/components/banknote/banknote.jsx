@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
 
-const invalidChars = [
-  "-",
-  "+",
-  "e",
-];
-
 export function Banknote({ denomination }) {
   const [value, setValue] = useState(0);
   const [errorText, setErrorText] = useState('');
