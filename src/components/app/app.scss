@@ -49,6 +49,9 @@ $tablet-width: 768px;
     min-height: 50px;
     border-bottom: 1px solid #000;
     margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 47px;
   }
 }
 
@@ -57,6 +60,12 @@ $tablet-width: 768px;
   display: block;
   padding: 10px;
   margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.button:disabled {
+  color: #a1a1a1;
+  cursor: auto;
 }
 
 .banknote {
