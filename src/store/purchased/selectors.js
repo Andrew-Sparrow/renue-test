@@ -1,3 +1,3 @@
 import { NameSpace } from '../root-reducer';
 
-export const getBalance = (state) => state[NameSpace.BALANCE].balance;
+export const getPurchased = (state) => state[NameSpace.PURCHASED].purchased;

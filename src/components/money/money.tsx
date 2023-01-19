@@ -33,7 +33,6 @@ export function Money(props) {
 
   function handleClickButton() {
     const currentSum = calculateBanknotesSum(givenBanknotes);
-    console.log(currentSum)
 
     dispatch(addToBalance(currentSum));
   }
