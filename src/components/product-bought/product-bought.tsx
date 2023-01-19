@@ -1,11 +1,9 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 
 import { ProductProps } from '../product/product';
 
 
-export function Product({ id, title, type, price, amount }: ProductProps) {
-  // const 
+export function ProductBought({ id, title, type, price, amount }: ProductProps) {
 
   return (
     <li className="product product--bought" >

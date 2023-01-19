@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Product } from '../product/product.tsx';
+import { ProductBought } from '../product-bought/product-bought.tsx';
 import { getPurchasedProducts } from '../../store/purchased/selectors';
 
 
@@ -10,7 +10,7 @@ function PurchasedProducts(props) {
   return (
     <ul>
       {purchasedProducts.map((product) =>
-        <Product
+        <ProductBought
           id={product.id}
           title={product.title}
           price={product.price}

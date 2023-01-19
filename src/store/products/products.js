@@ -28,7 +28,6 @@ const products = createReducer(initialState, (builder) => {
   builder
     .addCase(excludeFromProducts, (state, action) => {
       state.products = changeProductAmount(state.products, action.payload);
-      console.log('excude - ', action.payload)
     })
 });
 

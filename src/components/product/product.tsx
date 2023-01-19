@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
-import { excludeFromProducts } from '../../store/actions';
+import { excludeFromProducts, addToPurchased } from '../../store/actions';
 
 
 export interface ProductProps {
@@ -13,13 +13,24 @@ export interface ProductProps {
   isProductBought?: boolean;
 }
 
+let boughtProduct = {
+  id: '',
+  type: '',
+  price: 0,
+  title: '',
+  amount: 1,
+};
+
 export function Product({ id, title, type, price, amount }: ProductProps) {
   const dispatch = useDispatch();
 
+  boughtProduct.id = id;
+  boughtProduct.title = title;
+  boughtProduct.type = type;
 
   function onClickProductHandle() {
-    console.log(id);
-    dispatch(excludeFromProducts(id))
+    dispatch(excludeFromProducts(id));
+    dispatch(addToPurchased(boughtProduct));
   }
 
   return (
