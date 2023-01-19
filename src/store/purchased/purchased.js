@@ -10,8 +10,12 @@ const initialState = {
 
 function updatePurchasedProducts(purchasedProducts, product) {
   let newPurchasedProducts = [...purchasedProducts];
+  console.log(product)
 
   if (newPurchasedProducts.some((item) => item.id === product.id)) {
+    if (product.amount === 0) {
+      return newPurchasedProducts;
+    }
     const itemWithNewAmount = { ...product, amount: purchasedProducts.find((item) => item.id === product.id).amount + 1 };
     return newPurchasedProducts.map((item) => item.id === product.id ? itemWithNewAmount : item)
   } else {
@@ -22,7 +26,6 @@ function updatePurchasedProducts(purchasedProducts, product) {
 const purchased = createReducer(initialState, (builder) => {
   builder
     .addCase(addToPurchased, (state, action) => {
-      console.log(action.payload);
       state.purchased = updatePurchasedProducts(state.purchased, action.payload);
     })
 });

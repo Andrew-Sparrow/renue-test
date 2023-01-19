@@ -4,7 +4,6 @@ import { useDispatch } from 'react-redux';
 import { excludeFromProducts, addToPurchased } from '../../store/actions';
 
 
-
 export function Product({product}) {
   const dispatch = useDispatch();
 

@@ -11,6 +11,9 @@ const initialState = {
 };
 
 function productWithNewAmount(product) {
+  if (product.amount === 0) {
+    return { ...product, amount: 0 };
+  }
   return { ...product, amount: product.amount - 1 }
 }
 
