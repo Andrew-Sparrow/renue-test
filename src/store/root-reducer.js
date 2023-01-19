@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { balance } from './balance/balance';
-import { rest } from './rest/rest.js';
+import { restCash } from './rest-cash/rest-cash.js';
 import { purchased } from './purchased/purchased.js';
 
 
@@ -13,6 +13,6 @@ export const NameSpace = {
 
 export default combineReducers({
   [NameSpace.BALANCE]: balance,
-  [NameSpace.REST_CASH]: rest,
+  [NameSpace.REST_CASH]: restCash,
   [NameSpace.PURCHASED]: purchased,
 });
