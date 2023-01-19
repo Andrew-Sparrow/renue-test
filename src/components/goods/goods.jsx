@@ -12,12 +12,9 @@ export function Goods() {
     <ul className='goods'>
       {products.map((product) =>
         <Product
-          id={product.id}
-          title={product.title}
-          price={product.price}
-          amount={product.amount}
-          type={product.type}
-          key={product.id} />
+          product={product}
+          key={product.id}
+        />
       )
       }
     </ul>
