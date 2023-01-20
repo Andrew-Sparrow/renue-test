@@ -4,12 +4,12 @@ import { useDispatch } from 'react-redux';
 import { excludeFromProducts, addToPurchased } from '../../store/actions';
 
 
-export function Product({product}) {
+export function Product({id, product}) {
   const dispatch = useDispatch();
 
   function onClickProductHandle() {
-    dispatch(excludeFromProducts(product.id));
-    dispatch(addToPurchased(product));
+    dispatch(excludeFromProducts(id));
+    // dispatch(addToPurchased(product));
   }
 
   return (

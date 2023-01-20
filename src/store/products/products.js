@@ -10,19 +10,11 @@ const initialState = {
   products: goods,
 };
 
-function productWithNewAmount(product) {
-  if (product.amount === 0) {
-    return { ...product, amount: 0 };
-  }
-  return { ...product, amount: product.amount - 1 }
-}
+function changeProductAmount(products, id) {
+  const newProducts = {...products};
 
-function changeProductAmount(products, payload) {
-  const clonedProducts = { ...products };
-
-  const newProducts = Object.values(clonedProducts).map(
-    (product) => product.id === payload ? productWithNewAmount(product) : product
-  );
+  const newAmount = newProducts[id].amount > 0 ? newProducts[id].amount - 1 : 0;
+  newProducts[id].amount = newAmount;
 
   return newProducts;
 }
@@ -34,4 +26,4 @@ const products = createReducer(initialState, (builder) => {
     })
 });
 
-export { products };
+export { products};

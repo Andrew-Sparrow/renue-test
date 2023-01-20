@@ -12,6 +12,7 @@ export function Goods() {
     <ul className='goods'>
       {Object.entries(products).map((entry) =>
         <Product
+          id={entry[ENTRY.KEY_INDEX]}
           product={entry[ENTRY.VALUE_INDEX]}
           key={entry[ENTRY.KEY_INDEX]}
         />
