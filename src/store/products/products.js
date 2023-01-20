@@ -18,9 +18,9 @@ function productWithNewAmount(product) {
 }
 
 function changeProductAmount(products, payload) {
-  const clonedProducts = [...products];
+  const clonedProducts = { ...products };
 
-  const newProducts = clonedProducts.map(
+  const newProducts = Object.values(clonedProducts).map(
     (product) => product.id === payload ? productWithNewAmount(product) : product
   );
 

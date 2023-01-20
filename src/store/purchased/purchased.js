@@ -5,7 +5,7 @@ import {
 } from '../actions';
 
 const initialState = {
-  purchased: [],
+  purchased: {},
 };
 
 function updatePurchasedProducts(purchasedProducts, product) {

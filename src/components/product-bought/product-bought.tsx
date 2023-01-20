@@ -1,9 +1,8 @@
 import React from 'react';
 
-import { ProductProps } from '../product/product';
 
 
-export function ProductBought({ id, title, type, price, amount }: ProductProps) {
+export function ProductBought({ id, title, type, price, amount }) {
 
   return (
     <li className="product product--bought" >

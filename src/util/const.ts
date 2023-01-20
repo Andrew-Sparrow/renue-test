@@ -10,3 +10,8 @@ export enum GoodsTypes {
   cookies = 'Cookies',
   chips = 'Chips'
 };
+
+export const ENTRY = {
+  KEY_INDEX: 0,
+  VALUE_INDEX: 1
+}
