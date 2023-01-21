@@ -17,6 +17,7 @@ export function Product({ id, product }) {
     if (isBalanceEnoughToBuy && product.amount > 0) {
       dispatch(excludeFromProducts(id));
       dispatch(addToPurchased({ [id]: product }));
+      dispatch(addWarning(''));
     }
   }
 
