@@ -18,7 +18,7 @@ function updatePurchasedProducts(purchasedProducts, product) {
   const productId = newPurchasedProductEntry[ENTRY.KEY_INDEX];
   const newProduct = newPurchasedProductEntry[ENTRY.VALUE_INDEX]
 
-  if (Object.keys(purchasedProducts).includes(productId)) {
+  if (Object.keys(clonedPurchasedProducts).includes(productId)) {
 
     const newAmount = clonedPurchasedProducts[productId].amount + 1;
     clonedPurchasedProducts[productId].amount = newAmount;
