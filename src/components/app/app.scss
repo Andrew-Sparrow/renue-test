@@ -12,7 +12,8 @@ $tablet-width: 768px;
   flex-wrap: wrap;
 }
 
-.main {
+.main,
+footer {
   width: 320px;
   box-sizing: border-box;
   background-color: #f2f2f2;
@@ -21,7 +22,9 @@ $tablet-width: 768px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 50px;
+}
 
+.main {
   &__title {
     padding-top: 20px;
     margin-bottom: 20px;
@@ -184,8 +187,19 @@ $tablet-width: 768px;
   height: 300px;
 }
 
+.footer {
+  border-top: 1px solid #c3c3c3;
+  padding-top: 30px;
+
+  &__title {
+    color: #4b5254;
+  }
+}
+
 @media (min-width: $tablet-width) {
-  .main {
+
+  .main,
+  footer {
     width: $tablet-width;
   }
 
@@ -199,26 +213,26 @@ $tablet-width: 768px;
     }
   }
 
-    .money {
-      padding-left: 50px;
-    }
+  .money {
+    padding-left: 50px;
+  }
 
-    .change,
-    .purchased {
-      width: 280px;
-    }
+  .change,
+  .purchased {
+    width: 280px;
+  }
 
-    .purchased {
-      border-right: 1px solid #000;
-      padding-right: 50px;
-      margin-top: 50px;
-    }
+  .purchased {
+    border-right: 1px solid #000;
+    padding-right: 50px;
+    margin-top: 50px;
+  }
 
-    .change {
-      width: 280px;
-      padding-left: 50px;
-      margin-top: 50px;
-    }
+  .change {
+    width: 280px;
+    padding-left: 50px;
+    margin-top: 50px;
+  }
 
   .goods {
     height: 400px;
