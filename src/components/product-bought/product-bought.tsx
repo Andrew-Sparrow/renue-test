@@ -2,8 +2,8 @@ import React from 'react';
 
 
 
-export function ProductBought({ id, title, type, price, amount }) {
-  console.log(title)
+export function ProductBought({ product }) {
+  const { type, title, price, amount } = product;
 
   return (
     <li className="product product--bought" >
