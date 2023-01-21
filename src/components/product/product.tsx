@@ -1,18 +1,20 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { excludeFromProducts, addToPurchased } from '../../store/actions';
+import { getBalance } from '../../store/balance/selectors';
 
 
 export function Product({id, product}) {
   const dispatch = useDispatch();
+  const balance = useSelector(getBalance);
+  const isBalanceEnoughToBuy = balance > product.price;
 
   function onClickProductHandle() {
-    if (product.amount > 0) {
+    if ( isBalanceEnoughToBuy && product.amount > 0) {
       dispatch(excludeFromProducts(id));
       dispatch(addToPurchased({ [id]: product }));
     }
-
   }
 
   return (
