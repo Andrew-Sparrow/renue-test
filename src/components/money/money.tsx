@@ -3,13 +3,8 @@ import { useDispatch } from 'react-redux';
 
 import { acceptedBanknotes } from '../../util/const.ts';
 import { Banknote } from '../banknote/banknote.tsx';
-import { addToBalance } from '../../store/actions.js';
-import { AllowedChangeMoney } from '../../store/db/restChangeCash.js';
+import { addToBalance, extractFromBalance } from '../../store/actions.js';
 
-export type Note = {
-  nominal: AllowedChangeMoney,
-  amount: number
-};
 
 const givenMoney = {
   50: 0,

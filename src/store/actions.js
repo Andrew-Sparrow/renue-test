@@ -11,7 +11,12 @@ export const ActionType = {
 
 export const addToBalance = createAction(
   ActionType.ADD_TO_BALANCE,
-  (balance) => ({payload: balance}),
+  (number) => ({payload: number}),
+);
+
+export const extractFromBalance = createAction(
+  ActionType.EXTRACT_FROM_BALANCE,
+  (number) => ({payload: number}),
 );
 
 export const addToRest = createAction(

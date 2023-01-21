@@ -1,7 +1,13 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { excludeFromProducts, addToPurchased, addWarning } from '../../store/actions';
+import {
+  excludeFromProducts,
+  addToPurchased,
+  addWarning,
+  extractFromBalance
+} from '../../store/actions';
+
 import { getBalance } from '../../store/balance/selectors';
 
 
@@ -18,6 +24,7 @@ export function Product({ id, product }) {
       dispatch(excludeFromProducts(id));
       dispatch(addToPurchased({ [id]: product }));
       dispatch(addWarning(''));
+      dispatch(extractFromBalance(product.price));
     }
   }
 
