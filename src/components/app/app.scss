@@ -24,7 +24,12 @@ $tablet-width: 768px;
 
   &__title {
     padding-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 40px;
   }
 }
 
