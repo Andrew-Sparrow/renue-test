@@ -1,6 +1,6 @@
 import { createReducer } from '@reduxjs/toolkit';
 
-import { addToPurchased } from '../actions';
+import { addWarning } from '../actions';
 
 
 const initialState = {
@@ -8,10 +8,9 @@ const initialState = {
 };
 
 
-
 const warning = createReducer(initialState, (builder) => {
   builder
-    .addCase(addToPurchased, (state, action) => {
+    .addCase(addWarning, (state, action) => {
       state.warning = action.payload;
     })
 });
