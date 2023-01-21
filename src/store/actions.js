@@ -29,6 +29,6 @@ export const excludeFromProducts = createAction(
 );
 
 export const addWarning = createAction(
-  ActionType.EXCLUDE_FROM_PRODUCTS,
+  ActionType.ADD_WARNING_MESSAGE,
   (warningMessage) => ({ payload: warningMessage }),
 );
