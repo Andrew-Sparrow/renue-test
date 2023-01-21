@@ -12,7 +12,7 @@ export function Deposit(props) {
       <p className='deposit__info'>Your Balance</p>
       <p className='deposit__value'>{balance}</p>
       <p className='deposit__info deposit__info--warning'>Warning</p>
-      <p className='deposit__value'>{}</p>
+      <p className='deposit__value deposit__value--warning'>{}WarningWarningWarningWarningWarningWarning</p>
       <h4>List of Goods</h4>
       <Goods/>
     </div>

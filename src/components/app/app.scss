@@ -60,7 +60,14 @@ $tablet-width: 768px;
     font-weight: 600;
     font-size: 30px;
     line-height: 47px;
+    word-wrap: break-word;
+    word-break: break-all;
+
+    &--warning {
+      color: #66ff66;
+    }
   }
+
 }
 
 .button {
