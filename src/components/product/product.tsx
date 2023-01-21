@@ -9,7 +9,7 @@ export function Product({id, product}) {
 
   function onClickProductHandle() {
     dispatch(excludeFromProducts(id));
-    dispatch(addToPurchased(id));
+    dispatch(addToPurchased({ [id]: product }));
   }
 
   return (

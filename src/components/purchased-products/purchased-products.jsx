@@ -11,13 +11,13 @@ function PurchasedProducts(props) {
 
   return (
     <ul>
-      {Object.entries(purchasedProducts).map((product) =>
+      {Object.entries(purchasedProducts).map((productEntry) =>
         <ProductBought
-          title={product.title}
-          price={product.price}
-          amount={product.amount}
-          type={product.type}
-          key={product.id}
+          title={productEntry[ENTRY.VALUE_INDEX].title}
+          price={productEntry[ENTRY.VALUE_INDEX].price}
+          amount={productEntry[ENTRY.VALUE_INDEX].amount}
+          type={productEntry[ENTRY.VALUE_INDEX].type}
+          key={productEntry[ENTRY.KEY_INDEX]}
         />
       )
       }

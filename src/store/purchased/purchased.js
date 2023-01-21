@@ -1,24 +1,32 @@
 import { createReducer } from '@reduxjs/toolkit';
 
-import {
-  addToPurchased,
-} from '../actions';
+import { addToPurchased } from '../actions';
+import { ENTRY } from '../../util/const.ts';
+
 
 const initialState = {
   purchased: {},
 };
 
-function updatePurchasedProducts(purchasedProducts, id) {
-  const newPurchasedProducts = { ...purchasedProducts };
+const FIRST_ELEMENT = 0;
 
-  if (Object.keys(purchasedProducts).includes(id)) {
+function updatePurchasedProducts(purchasedProducts, product) {
+  const clonedPurchasedProducts = JSON.parse(JSON.stringify(purchasedProducts));
+  const clonedProduct = JSON.parse(JSON.stringify(product));
 
-    const newAmount = newPurchasedProducts[id].amount + 1;
-    newPurchasedProducts[id].amount = newAmount;
+  const newPurchasedProductEntry = Object.entries(clonedProduct)[FIRST_ELEMENT];
+  const productId = newPurchasedProductEntry[ENTRY.KEY_INDEX];
+  const newProduct = newPurchasedProductEntry[ENTRY.VALUE_INDEX]
 
-    return newPurchasedProducts;
+  if (Object.keys(purchasedProducts).includes(productId)) {
+
+    const newAmount = clonedPurchasedProducts[productId].amount + 1;
+    clonedPurchasedProducts[productId].amount = newAmount;
+
+    return clonedPurchasedProducts;
   } else {
-    return newPurchasedProducts;
+    newProduct.amount = 1;
+    return { ...clonedPurchasedProducts, [productId]: newProduct };
   }
 }
 

@@ -24,5 +24,5 @@ export const addToPurchased = createAction(
 
 export const excludeFromProducts = createAction(
   ActionType.EXCLUDE_FROM_PRODUCTS,
-  (id) => ({ payload: id }),
+  (product) => ({ payload: product }),
 );

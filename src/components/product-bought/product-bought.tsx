@@ -3,6 +3,7 @@ import React from 'react';
 
 
 export function ProductBought({ id, title, type, price, amount }) {
+  console.log(title)
 
   return (
     <li className="product product--bought" >
