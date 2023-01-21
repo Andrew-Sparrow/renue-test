@@ -19,7 +19,7 @@ export const addToRest = createAction(
 
 export const addToPurchased = createAction(
   ActionType.ADD_TO_REST,
-  (rest) => ({payload: rest}),
+  (id) => ({payload: id}),
 );
 
 export const excludeFromProducts = createAction(
