@@ -12,13 +12,13 @@ export function Banknote({ denomination, onGivenCashChange }) {
   const [errorText, setErrorText] = useState('');
 
   function handleChangeInput(evt) {
-    const value = evt.target.value;
+    let value = evt.target.value;
 
     if (isNaN(value)) {
       setErrorText('Enter only number');
       setBanknoteAmount(0);
     } else {
-      const value = +evt.target.value
+      value = +evt.target.value
       const newGivenBanknoteAmount = { ...note, amount: value };
       setBanknoteAmount(value);
       setErrorText('');
