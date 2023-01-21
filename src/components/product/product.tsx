@@ -8,8 +8,11 @@ export function Product({id, product}) {
   const dispatch = useDispatch();
 
   function onClickProductHandle() {
-    dispatch(excludeFromProducts(id));
-    dispatch(addToPurchased({ [id]: product }));
+    if (product.amount > 0) {
+      dispatch(excludeFromProducts(id));
+      dispatch(addToPurchased({ [id]: product }));
+    }
+
   }
 
   return (
