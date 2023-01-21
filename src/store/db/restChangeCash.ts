@@ -1,34 +1,21 @@
-import { changeBanknotes } from "../../const.ts";
-export type AllowedChangeMoney = typeof changeBanknotes[number]
 
-type RestOfCash = {
-  nominal: AllowedChangeMoney,
-  restAmount: number
-};
-
-export let restOfCash: RestOfCash[] = [
-  {
-    nominal: 1,
+export let restOfCash = {
+  1: {
     restAmount: 50
   },
-  {
-    nominal: 5,
+  5: {
     restAmount: 150
   },
-  {
-    nominal: 10,
+  10: {
     restAmount: 11
   },
-  {
-    nominal: 50,
+  50:{
     restAmount: 40
   },
-  {
-    nominal: 100,
+  100: {
     restAmount: 25
   },
-  {
-    nominal: 500,
+  500: {
     restAmount: 50
   },
-];
+};

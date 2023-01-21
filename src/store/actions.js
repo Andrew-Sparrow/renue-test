@@ -2,7 +2,8 @@ import {createAction} from '@reduxjs/toolkit';
 
 export const ActionType = {
   ADD_TO_BALANCE: 'balance/add_to_balance',
-  ADD_TO_REST: 'rest/cash_in_rest',
+  EXTRACT_FROM_BALANCE: 'balance/extract_from_balance',
+  ADD_TO_REST_CASH: 'rest/add_to_rest_cash',
   ADD_TO_PURCHASED: 'purchased/add_to_purchased',
   EXCLUDE_FROM_PRODUCTS: 'products/exclude_from_products',
   ADD_WARNING_MESSAGE: 'warning/add_warning_message',
@@ -14,12 +15,12 @@ export const addToBalance = createAction(
 );
 
 export const addToRest = createAction(
-  ActionType.ADD_TO_REST,
+  ActionType.ADD_TO_REST_CASH,
   (rest) => ({payload: rest}),
 );
 
 export const addToPurchased = createAction(
-  ActionType.ADD_TO_REST,
+  ActionType.ADD_TO_PURCHASED,
   (id) => ({payload: id}),
 );
 
@@ -32,3 +33,4 @@ export const addWarning = createAction(
   ActionType.ADD_WARNING_MESSAGE,
   (warningMessage) => ({ payload: warningMessage }),
 );
+
