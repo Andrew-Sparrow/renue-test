@@ -7,6 +7,7 @@ export const ActionType = {
   ADD_TO_PURCHASED: 'purchased/add_to_purchased',
   EXCLUDE_FROM_PRODUCTS: 'products/exclude_from_products',
   ADD_WARNING_MESSAGE: 'warning/add_warning_message',
+  ADD_TO_CHANGE: 'change/add_to_change',
 };
 
 export const addToBalance = createAction(
@@ -37,5 +38,10 @@ export const excludeFromProducts = createAction(
 export const addWarning = createAction(
   ActionType.ADD_WARNING_MESSAGE,
   (warningMessage) => ({ payload: warningMessage }),
+);
+
+export const addToChange = createAction(
+  ActionType.ADD_TO_CHANGE,
+  (change) => ({ payload: change }),
 );
 

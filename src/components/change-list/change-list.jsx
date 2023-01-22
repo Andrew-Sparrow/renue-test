@@ -1,29 +1,21 @@
 import React from 'react';
-import { Change } from '../change/change';
+import { useSelector } from 'react-redux';
 
-let restOfCash = [
-  {
-    banknote: 1,
-    restAmount: 50
-  },
-  {
-    banknote: 5,
-    restAmount: 150
-  },
-  {
-    banknote: 10,
-    restAmount: 11
-  }
-];
+import { Change } from '../change/change';
+import { getChange } from '../../store/change/selectors';
+import { ENTRY } from '../../util/const.ts';
+
 
 function ChangeList(props) {
+  const change = useSelector(getChange);
+
   return (
     <ul>
-      {restOfCash.map((change) => (
+      {Object.entries(change).map((changeEntry) => (
         <Change
-          denomination={change.banknote}
-          restAmount={change.restAmount}
-          key={change.banknote}
+          denomination={changeEntry[ENTRY.KEY_INDEX]}
+          restAmount={changeEntry[ENTRY.VALUE_INDEX].restAmount}
+          key={changeEntry[ENTRY.KEY_INDEX]}
         />)
       )}
     </ul>

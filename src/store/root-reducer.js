@@ -4,6 +4,7 @@ import { restCash } from './rest-cash/rest-cash.js';
 import { purchased } from './purchased/purchased.js';
 import { products } from './products/products';
 import { warning } from './warning/warning'
+import { change } from './change/change';
 
 
 export const NameSpace = {
@@ -11,7 +12,8 @@ export const NameSpace = {
   REST_CASH: 'REST_CASH',
   GOODS: 'GOODS',
   PURCHASED: 'PURCHASED',
-  WARNING: 'WARNING'
+  WARNING: 'WARNING',
+  CHANGE: 'CHANGE'
 };
 
 export default combineReducers({
@@ -20,4 +22,5 @@ export default combineReducers({
   [NameSpace.PURCHASED]: purchased,
   [NameSpace.GOODS]: products,
   [NameSpace.WARNING]: warning,
+  [NameSpace.CHANGE]: change,
 });

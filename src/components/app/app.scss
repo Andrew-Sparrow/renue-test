@@ -7,7 +7,7 @@ $tablet-width: 768px;
 }
 
 a {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .wrapper {
@@ -101,6 +101,7 @@ a {
   }
 
   &__rest {
+    width: 185px;
     box-sizing: border-box;
     padding-left: 10px;
     padding-right: 10px;
@@ -210,6 +211,21 @@ a {
   list-style: none;
   overflow-y: auto;
   height: 300px;
+}
+
+.change {
+  h4 {
+    margin-bottom: 20px;
+  }
+
+  &__amount {
+    display: block;
+    width: 280px;
+    min-height: 50px;
+    background-color: #fff;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
 }
 
 .footer {

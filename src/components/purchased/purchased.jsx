@@ -12,6 +12,7 @@ export function Purchased(props) {
       <div className='change'>
         <button className='button'>Get change</button>
         <h4>Your change</h4>
+        <p className="change__amount"></p>
         <ChangeList />
       </div>
     </div>
