@@ -19,13 +19,18 @@ declare module 'react' {
 export function Product({ id, product }) {
   const dispatch = useDispatch();
   const balance = useSelector(getBalance);
-  const isBalanceEnoughToBuy = balance > product.price;
+  const isBalanceEnoughToBuy = balance >= product.price;
+  const isProductAvailableToBuy = product.amount > 0;
+
 
   function onClickProductHandle() {
     if (!isBalanceEnoughToBuy) {
       dispatch(addWarning('Please, replenish the balance'));
     }
-    if (isBalanceEnoughToBuy && product.amount > 0) {
+    if (!isProductAvailableToBuy) {
+      dispatch(addWarning('There is no product'));
+    }
+    if (isBalanceEnoughToBuy && isProductAvailableToBuy) {
       dispatch(excludeFromProducts(id));
       dispatch(addToPurchased({ [id]: product }));
       dispatch(addWarning(''));

@@ -25,7 +25,7 @@ export let goods: { [key: string]: Product} =  {
     type: GoodsTypes.soda,
     price: 143,
     title: "COCA-COLA",
-    amount: 1,
+    amount: 0,
   },
   [nanoid()]: {
     type: GoodsTypes.soda,
