@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 
 import { acceptedBanknotes } from '../../util/const.ts';
 import { Banknote } from '../banknote/banknote.tsx';
-import { addToBalance, extractFromBalance } from '../../store/actions.js';
+import { addToBalance, addWarning } from '../../store/actions.js';
 
 
 const givenMoney = {
@@ -30,6 +30,7 @@ export function Money(props) {
     const currentSum = calculateBanknotesSum(givenBanknotes);
 
     dispatch(addToBalance(currentSum));
+    dispatch(addWarning(''));
   }
 
   function onGivenCashChange(givenCash) {

@@ -184,9 +184,18 @@ $tablet-width: 768px;
   }
 }
 
-.product:hover {
-  background-color: #a1a1a1;
+.product:hover:not([disabled]) {
   cursor: pointer;
+}
+
+.product[disabled] {
+  .product__title,
+  .product__price,
+  .product__amount {
+    color: #8a8c8d;
+    cursor: auto;
+    background-color: #c9c9c9;
+  }
 }
 
 .goods {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { AriaAttributes, DOMAttributes } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import {
@@ -10,6 +10,11 @@ import {
 
 import { getBalance } from '../../store/balance/selectors';
 
+declare module 'react' {
+  interface HTMLAttributes<T> extends AriaAttributes, DOMAttributes<T> {
+    disabled?: boolean;
+  }
+};
 
 export function Product({ id, product }) {
   const dispatch = useDispatch();
@@ -29,7 +34,7 @@ export function Product({ id, product }) {
   }
 
   return (
-    <li className="product" onClick={onClickProductHandle}>
+    <li className="product" onClick={onClickProductHandle} disabled={product.amount === 0} >
       <p className="product__type">{product.type}</p>
       <div className="product__wrapper">
         <p className="product__title">{product.title}</p>

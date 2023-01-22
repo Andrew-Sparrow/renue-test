@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { Note } from '../money/money';
 
 
 export function Banknote({ denomination, onGivenCashChange }) {
-  const note: Note = {
+  const note = {
     nominal: denomination,
     amount: 0
   }
