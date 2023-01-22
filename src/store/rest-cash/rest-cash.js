@@ -14,8 +14,6 @@ const initialState = {
 function addToRestOFCash(givenCash, oldRestOFCash) {
   const clonedRestOfCash = JSON.parse(JSON.stringify(oldRestOFCash));
 
-  console.log(clonedRestOfCash);
-
   Object.entries(givenCash).forEach(
     (cashEntry) => {
       return clonedRestOfCash[cashEntry[ENTRY.KEY_INDEX]].restAmount = clonedRestOfCash[cashEntry[ENTRY.KEY_INDEX]].restAmount + cashEntry[ENTRY.VALUE_INDEX];

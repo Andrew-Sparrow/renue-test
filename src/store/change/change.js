@@ -10,10 +10,23 @@ const initialState = {
   change: changeList,
 };
 
+// function to calculate change money
+function calculateChange(restOfCashInStore, currentBalance) {
+  let changeCash;
+  // console.log(currentBalance);
+  // console.log(JSON.parse(JSON.stringify(state)));
+
+
+  Object.entries(restOfCashInStore).reverse();
+
+  return changeCash;
+}
+
 const change = createReducer(initialState, (builder) => {
   builder
     .addCase(addToChange, (state, action) => {
-      state.change = state.change + action.payload;
+      calculateChange(state.change, action.payload);
+      state.change = state.change;
     })
 });
 

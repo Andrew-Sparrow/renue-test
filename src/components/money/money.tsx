@@ -5,9 +5,9 @@ import { Banknote } from '../banknote/banknote.tsx';
 import {
   addToBalance,
   addWarning,
-  addToRest
+  addToRest,
+  addToChange
 } from '../../store/actions.js';
-
 import { ENTRY } from '../../util/const.ts';
 
 
@@ -58,7 +58,6 @@ export function Money(props) {
         ))}
       </ul>
       <button className='button' onClick={handleClickButton}>Add to Balance</button>
-      <button className='button'>Get change/return money</button>
     </div>
   );
 }
