@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Vending machine
 
 #### live version of this project is on GitHub Pages
 https://andrew-sparrow.github.io/renue-test/
