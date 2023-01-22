@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { acceptedBanknotes } from '../../util/const.ts';
 import { Banknote } from '../banknote/banknote.tsx';
 import { addToBalance, addWarning } from '../../store/actions.js';
+import { ENTRY } from '../../util/const.ts';
 
 
 const givenMoney = {
@@ -39,11 +39,12 @@ export function Money(props) {
 
   return (
     <div className='money'>
-      <p>Select banknotes to deposit into the machine</p>
+      <p>Select banknotes to add to balance</p>
       <ul className='banknotes'>
-        {acceptedBanknotes.map((denomination) => (
+        {Object.entries(givenMoney).map((banknoteEntry) => (
           <Banknote
-            denomination={denomination} key={denomination}
+            denomination={banknoteEntry[ENTRY.KEY_INDEX]}
+            key={banknoteEntry[ENTRY.KEY_INDEX]}
             onGivenCashChange={onGivenCashChange}
           />
         ))}
