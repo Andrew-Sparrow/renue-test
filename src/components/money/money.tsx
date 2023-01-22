@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { Banknote } from '../banknote/banknote.tsx';
-import { addToBalance, addWarning } from '../../store/actions.js';
+import {
+  addToBalance,
+  addWarning,
+  addToRest
+} from '../../store/actions.js';
+
 import { ENTRY } from '../../util/const.ts';
 
 
@@ -29,8 +34,11 @@ export function Money(props) {
   function handleClickButton() {
     const currentSum = calculateBanknotesSum(givenBanknotes);
 
-    dispatch(addToBalance(currentSum));
-    dispatch(addWarning(''));
+    if (currentSum > 0) {
+      dispatch(addToBalance(currentSum));
+      dispatch(addWarning(''));
+      dispatch(addToRest(givenBanknotes));
+    }
   }
 
   function onGivenCashChange(givenCash) {

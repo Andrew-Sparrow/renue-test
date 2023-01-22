@@ -22,7 +22,7 @@ export const extractFromBalance = createAction(
 
 export const addToRest = createAction(
   ActionType.ADD_TO_REST_CASH,
-  (rest) => ({payload: rest}),
+  (banknotes) => ({payload: banknotes}),
 );
 
 export const addToPurchased = createAction(

@@ -18,4 +18,7 @@ export let restOfCash = {
   500: {
     restAmount: 50
   },
+  1000: {
+    restAmount: 0
+  },
 };
